@@ -3,7 +3,9 @@ stowedots
 
 My dotfiles in stow structure
 
-  git clone git@github.com:fixerfrasse/stowedots
+Installation
+------------
+  git clone https://github.com/fixerfrasse/stowedots.git
   cd stowedots
   ./install-base.sh
 
