@@ -1,0 +1,5 @@
+#!/bin/bash
+
+git checkout test
+git merge dev
+git commit 

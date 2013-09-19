@@ -1,0 +1,4 @@
+#!/bin/sh
+
+uzbl-browser --uri "$@" &
+

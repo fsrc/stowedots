@@ -1,0 +1,59 @@
+let g:snips_author = 'Fredrik Andersson <fredrik@kondensator.se>'
+
+let NERDTreeShowBookmarks=0
+let NERDTreeQuitOnOpen=0
+let NERDTreeShowHidden=0
+let g:nerdtree_tabs_open_on_gui_startup=1
+let g:tagbar_ctags_bin="/usr/bin/ctags"
+let g:syntastic_coffee_checkers=['coffee']
+
+if executable('coffeetags')
+  let g:tagbar_type_coffee = {
+        \ 'ctagsbin' : 'coffeetags',
+        \ 'ctagsargs' : '--include-vars',
+        \ 'kinds' : [
+        \ 'f:functions',
+        \ 'o:object',
+        \ ],
+        \ 'sro' : ".",
+        \ 'kind2scope' : {
+        \ 'f' : 'object',
+        \ 'o' : 'object',
+        \ }
+        \ }
+endif
+
+set shell=/bin/bash
+let g:numbers_exclude=['nerdtree', 'unite', 'tagbar', 'startify', 'gundo', 'vimshell', 'w3m']
+let g:airline_powerline_fonts=1
+
+" General {
+    set mouse=                 " Automatically enable mouse usage
+    set autowrite              " Automatically write a file when leaving a modified buffer
+    set virtualedit=           " Allow for cursor beyond last character
+    set nospell                " Spell checking on
+" }
+
+" Vim UI {
+    set whichwrap=b,s          " Backspace and cursor keys wrap too
+" }
+
+" Formatting {
+    set wrap                   " Wrap long lines
+    set shiftwidth=2           " Use indents of 4 spaces
+    set expandtab              " Tabs are spaces, not tabs
+    set tabstop=2              " An indentation every four columns
+    set softtabstop=2          " Let backspace delete indent
+    set pastetoggle=<F12>      " pastetoggle (sane indentation on pastes)
+
+    " Strip trailing whitespaces
+    autocmd FileType jade,coffee,javascript autocmd BufWritePre <buffer> call StripTrailingWhitespace()
+" }
+
+" Key (re)Mappings {
+    let mapleader='\'
+    vnoremap < <
+    vnoremap > >
+" }
+
+

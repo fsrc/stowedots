@@ -1,0 +1,9 @@
+
+if has('gui_running')
+  set guifont=Source\ Code\ Pro\ for\ Powerline\ Medium\ 10
+  set guioptions=aegitc
+  set nospell
+  " Make shift-insert work like in Xterm
+  map <S-Insert> <MiddleMouse>
+  map! <S-Insert> <MiddleMouse>
+endif
