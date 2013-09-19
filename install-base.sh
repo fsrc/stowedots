@@ -36,9 +36,11 @@ stow scripts
 stow mc
 stow git
 stow terminfo
-stow --override=* zsh
-stow --override=* vim
 
 install_oh-my-zsh
+stow --override=* zsh
+
 install_spf13-vim3
+stow --override=* vim
+
 
