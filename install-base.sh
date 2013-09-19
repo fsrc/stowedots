@@ -25,18 +25,19 @@ install_spf13-vim3() {
   curl http://j.mp/spf13-vim3 -L -o - | sh
 }
 
-stow scripts
-stow zsh
-stow vim
-stow mc
-stow git
-stow terminfo
-
+ensure_command stow
 ensure_command git
 ensure_command zsh
 ensure_command vim
 ensure_command mc
 ensure_command curl
+
+stow scripts
+stow mc
+stow git
+stow terminfo
+stow --override=* zsh
+stow --override=* vim
 
 install_oh-my-zsh
 install_spf13-vim3
