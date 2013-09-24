@@ -9,8 +9,8 @@
 ! *boldFont: -xos4-terminus-medium-r-normal-*-12-*-*-*-*-*-*-*
 ! *italicFont: -xos4-terminus-medium-r-normal-*-12-*-*-*-*-*-*-*
 
-*font: xft:DejaVu Sans Mono:antialias=true:pixelsize=11
-*boldFont:xft:DejaVu Sans Mono:style=bold:antialias=true:pixelsize=11
+*font: xft:DejaVu Sans Mono for Powerline:antialias=true:pixelsize=11
+*boldFont:xft:DejaVu Sans Mono for Powerline:style=bold:antialias=true:pixelsize=11
 
 URxvt*letterSpace: 0
 !Options

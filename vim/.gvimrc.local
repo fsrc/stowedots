@@ -1,6 +1,6 @@
 
 if has('gui_running')
-  set guifont=Source\ Code\ Pro\ for\ Powerline\ Medium\ 10
+  set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 10
   set guioptions=aegitc
   set nospell
   " Make shift-insert work like in Xterm

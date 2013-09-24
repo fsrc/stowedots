@@ -54,6 +54,8 @@ let g:airline_powerline_fonts=1
     let mapleader='\'
     vnoremap < <
     vnoremap > >
+    noremap j j
+    noremap k k
 " }
 
 
