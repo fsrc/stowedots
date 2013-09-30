@@ -1,4 +1,4 @@
-#!/bin/env bash
+#!/bin/bash
 
 install_command() {
   if hash pacman 2>/dev/null; then
