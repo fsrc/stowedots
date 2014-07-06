@@ -16,8 +16,10 @@ zstyle :omz:plugins:ssh-agent agent-forwarding on
 
 source $ZSH/oh-my-zsh.sh
 
-export PATH=${HOME}/bin
+export PATH=${HOME}/.cabal/bin
+export PATH=${PATH}:${HOME}/bin
 export PATH=${PATH}:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin
+export PATH=${PATH}:/usr/bin/core_perl
 export PATH=${PATH}:/usr/local/sbin
 export PATH=${PATH}:/usr/X11/bin
 
@@ -33,3 +35,7 @@ export NLS_LANG="AMERICAN_AMERICA.UTF8"
 
 alias pacman="pacman --color always"
 alias packer="packer-color"
+nvm use default
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+source /home/fredrik/.rvm/scripts/rvm

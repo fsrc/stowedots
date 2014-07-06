@@ -1,27 +1,13 @@
 ! Urxvt ---------------------------------------------------------------
-!Font
-!*font: -misc-fixed-medium-r-semicondensed-*-*-*-*-*-*-*-*-*
-!*boldFont: -misc-fixed-medium-r-semicondensed-*-*-*-*-*-*-*-*-*
-!*italicFont: -misc-fixed-medium-r-semicondensed-*-*-*-*-*-*-*-*-*
-!*boldItalicFont: -misc-fixed-medium-r-semicondensed-*-*-*-*-*-*-*-*-*
-! *font: -xos4-terminus-medium-r-normal-*-12-*-*-*-*-*-*-*
-! *font: -xos4-terminus-medium-r-normal-*-12-*-*-*-*-*-*-*
-! *boldFont: -xos4-terminus-medium-r-normal-*-12-*-*-*-*-*-*-*
-! *italicFont: -xos4-terminus-medium-r-normal-*-12-*-*-*-*-*-*-*
+*font: xft:DejaVu Sans Mono for Powerline:antialias=true:pixelsize=15
+!*boldFont:xft:DejaVu Sans Mono for Powerline:style=bold:antialias=true:pixelsize=11
 
-*font: xft:DejaVu Sans Mono for Powerline:antialias=true:pixelsize=11
-*boldFont:xft:DejaVu Sans Mono for Powerline:style=bold:antialias=true:pixelsize=11
+URxvt*letterSpace: -1
+URxvt*lineSpace: 3
 
-URxvt*letterSpace: 0
-!Options
-!URxvt*termName: rxvt-256color
-! URxvt.depth: 32
-! URxvt*background: rgba:0000/0000/0200/c800
-!URxvt*title: Terminal
 URxvt*urgentOnBell: true
 URxvt*visualBell: false
-!URxvt*borderless: true
-URxvt*saveLines: 5000
+URxvt*saveLines: 64000
 URxvt*internalBorder: 0
 Urxvt*secondaryScroll: true
 URxvt*scrollTtyKeypress: true
@@ -29,16 +15,14 @@ URxvt*scrollWithBuffer: true
 URxvt*scrollTtyOutput: false
 URxvt*loginShell: true
 URxvt*scrollBar: false
-!Transparency
 URxvt*transparent: true
 ! URxvt*tint: #020202
 URxvt*shading: 6
-!URxvt*inheritPixmap: true
-!Links
+!URxvt*fading: 30
 
 URxvt*perl-ext-common: default,matcher,-option-popup,-selection-popup,-realine,font-size,vim-scrollback
 URxvt*matcher.button: 1
-URxvt*urlLauncher: uzbl-browser
+URxvt*urlLauncher: chromium
 URxvt*vim-scrollback: M-s
 URxvt*vim-scrollback-paste: M-p
 
@@ -54,6 +38,8 @@ URxvt.keysym.C-Up:     perl:font-size:increase
 URxvt.keysym.C-Down:   perl:font-size:decrease
 URxvt.keysym.C-S-Up:   perl:font-size:incglobal
 URxvt.keysym.C-S-Down: perl:font-size:decglobal
+
+!Xft.rgba: rgb
 
 ! Colors --------------------------------------------------------------
 ! black 0-8; red 1-9; green 2-10; yellow 3-11; blue 4-12; magenta 5-13; cyan 6-14; white 7-15

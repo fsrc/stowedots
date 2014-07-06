@@ -17,18 +17,18 @@ font pango:DejaVu Sans Mono 10
 
 new_window pixel
 # class                 border  backgr. text     indicato
-client.focused          #cb4b16 #cb4b16 #fdf6e3  #2e9ef4
-client.focused_inactive #657b83 #657b83 #fdf6e3  #484e50
-client.unfocused        #111111 #586e75 #eee8d5  #292d2e
-client.urgent           #dc322f #dc322f #fdf6e3  #900000
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
-bindsym $mod+Ctrl+Return exec vimprobable2
+bindsym $mod+Ctrl+Return exec firefox
+
+bindsym $mod+Ctrl+m exec thunderbird.sh #chromium https://gmail.com
+bindsym $mod+Ctrl+c exec chromium http://calendar.kondensator.se
 
 # start a terminal
-bindsym $mod+Shift+Return exec urxvtc
+bindsym $mod+Shift+Return exec urxvtc #~/bin/term.sh
+
 
 # kill focused window
 bindsym $mod+Shift+Q kill
@@ -91,7 +91,7 @@ bindsym $mod+a focus parent # focus the child container bindcode $mod+d focus ch
 # exec --no-startup-id i3-msg 'rename workspace 9 to 9:work'
 # exec --no-startup-id i3-msg 'rename workspace 10 to 10:social'
 
-exec --no-startup-id exec ~/.bin/keyrate.sh
+exec --no-startup-id exec /home/fredrik/bin/keyrate.sh
 
 # switch to workspace
 bindsym $mod+1 workspace number 1
@@ -118,7 +118,9 @@ bindsym $mod+Shift+parenleft move container to workspace 9
 bindsym $mod+Shift+parenright move container to workspace 10
 
 # toggle language input
-bindsym $mod+Ctrl+space exec /home/fredrik/.bin/togglelang.sh
+bindsym $mod+Ctrl+space exec /home/fredrik/bin/toggle-lang.sh
+# toggle touch
+bindsym Mod1+Shift+Space exec /home/fredrik/bin/toggle-touch.sh
 
 # reload the configuration file
 bindsym $mod+Shift+C reload
@@ -135,13 +137,16 @@ bindsym $mod+r exec i3-input -F 'rename workspace to %s' -P 'New name: '
 bar {
   status_command i3status
   colors {
-    background #0e0e0e
-    statusline #839496
-
-    
-    focused_workspace  #000000 #b58900 #111111
-    inactive_workspace #000000 #586e75 #111111
-    urgent_workspace   #000000 #839496 #dc322f
-    active_workspace   #000000 #839496 #111111
+    separator #666666
+    background #222222
+    statusline #dddddd
+    focused_workspace #0088CC #0088CC #ffffff
+    active_workspace #333333 #333333 #ffffff
+    inactive_workspace #333333 #333333 #888888
+    urgent_workspace #2f343a #900000 #ffffff
   }
 }
+client.focused #0088CC #0088CC #ffffff #dddddd
+client.focused_inactive #333333 #333333 #888888 #292d2e
+client.unfocused #333333 #333333 #888888 #292d2e
+client.urgent #2f343a #900000 #ffffff #900000

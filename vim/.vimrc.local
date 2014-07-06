@@ -1,11 +1,13 @@
 let g:snips_author = 'Fredrik Andersson <fredrik@kondensator.se>'
+let g:haddock_browser = "/usr/bin/chromium"
 
 let NERDTreeShowBookmarks=0
-let NERDTreeQuitOnOpen=0
+let NERDTreeQuitOnOpen=1
 let NERDTreeShowHidden=0
-let g:nerdtree_tabs_open_on_gui_startup=1
+let g:nerdtree_tabs_open_on_gui_startup=0
 let g:tagbar_ctags_bin="/usr/bin/ctags"
 let g:syntastic_coffee_checkers=['coffee']
+
 
 if executable('coffeetags')
   let g:tagbar_type_coffee = {
@@ -49,13 +51,14 @@ let g:airline_powerline_fonts=1
     " Strip trailing whitespaces
     autocmd FileType jade,coffee,javascript autocmd BufWritePre <buffer> call StripTrailingWhitespace()
 " }
-
 " Key (re)Mappings {
     let mapleader='\'
     vnoremap < <
     vnoremap > >
     noremap j j
     noremap k k
+    noremap Ö :
+    noremap <C-å> <Esc>
 " }
 
-
+colorscheme wombat256

@@ -16,3 +16,9 @@
 	trustExitCode = true
 [push]
 	default = simple
+[giggle]
+	main-window-maximized = false
+	main-window-geometry = 1916x1055+0+0
+	history-view-vpane-position = 731
+	main-window-view = HistoryView
+	file-view-vpane-position = 915
