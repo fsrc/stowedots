@@ -21,10 +21,13 @@ new_window pixel
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
-bindsym $mod+Ctrl+Return exec firefox
+bindsym $mod+Ctrl+Return exec chromium
 
-bindsym $mod+Ctrl+m exec thunderbird.sh #chromium https://gmail.com
-bindsym $mod+Ctrl+c exec chromium http://calendar.kondensator.se
+bindsym $mod+Ctrl+m exec chromium https://gmail.com
+bindsym $mod+Ctrl+c exec chromium https://calendar.google.com
+bindsym $mod+Ctrl+f exec chromium https://drive.google.com
+bindsym $mod+Ctrl+t exec chromium https://trello.com
+
 
 # start a terminal
 bindsym $mod+Shift+Return exec urxvtc #~/bin/term.sh

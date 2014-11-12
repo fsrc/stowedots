@@ -1,0 +1,7 @@
+node_modules/
+id_dsa
+id_dsa.pub
+known_hosts
+thefarm
+thefarm.pub
+environment-*
