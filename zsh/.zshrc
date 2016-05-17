@@ -10,9 +10,10 @@ ZSH_THEME="ys"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(ssh-agent nvm gitfast git-extras npm node github coffee archlinux complete gem colored-man extract dircycleh)
+#plugins=(ssh-agent nvm gitfast git-extras npm node github coffee archlinux complete gem colored-man extract dircycleh)
+plugins=(nvm gitfast git-extras npm node github coffee archlinux complete gem colored-man extract dircycleh)
 
-zstyle :omz:plugins:ssh-agent agent-forwarding on
+#zstyle :omz:plugins:ssh-agent agent-forwarding on
 
 source $ZSH/oh-my-zsh.sh
 
@@ -39,7 +40,7 @@ export TRELLO_MEMBER_TOKEN=cbbd0f3660df0890da3066a18ba6e453489fdb94d410417ce974d
 
 
 alias pacman="pacman --color always"
-alias packer="packer-color"
+alias packer="packer-color --noedit"
 nvm use default
 
 source /home/fredrik/.rvm/scripts/rvm

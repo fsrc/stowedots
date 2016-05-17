@@ -5,7 +5,7 @@ xset fp rehash
 #~/.bin/autoscreen.sh
 #~/.bin/keyrate.sh
 
-pulseaudio --start
+#pulseaudio --start
 
 # Start deamons
 #/usr/bin/mpd
@@ -18,15 +18,18 @@ pulseaudio --start
 # /usr/bin/feh --bg-scale ~/wallpapers/arch/A1.jpg
 #nitrogen --restore &
 
-wicd-gtk &
+#wicd-gtk &
 
 #pasystray &
-pa-applet &
+#pa-applet &
 
 export PATH=${PATH}:${HOME}/bin
 
 # Launch window manager
 #exec ck-launch-session dbus-launch --sh-syntax --exit-with-session /usr/bin/xmonad
 #exec xmonad
-exec i3
-#exec gnome-session
+#exec i3
+eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh)
+
+exec gnome-session --session=i3-gnome
+#exec i3-gnome

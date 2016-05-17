@@ -7,6 +7,7 @@ let NERDTreeShowHidden=0
 let g:nerdtree_tabs_open_on_gui_startup=0
 let g:tagbar_ctags_bin="/usr/bin/ctags"
 let g:syntastic_coffee_checkers=['coffee']
+let g:indent_guides_enable_on_vim_startup=0
 
 
 if executable('coffeetags')

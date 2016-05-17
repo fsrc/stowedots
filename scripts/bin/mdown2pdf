@@ -1,2 +1,0 @@
-pandoc -s $1 -o $1.pdf
-mupdf $1.pdf

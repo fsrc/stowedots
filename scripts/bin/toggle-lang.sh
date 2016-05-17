@@ -3,8 +3,8 @@
 CURR=$(currlang.sh)
 
 if [ "$CURR" == "us" ] ; then
-  /usr/bin/setxkbmap se
+  setxkbmap -layout se -option ctrl:nocaps 2>/dev/null
 else
-  /usr/bin/setxkbmap us
+  setxkbmap -layout us -option ctrl:nocaps 2>/dev/null
 fi
 /usr/bin/xset r rate 200 40

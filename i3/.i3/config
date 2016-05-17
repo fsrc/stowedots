@@ -21,7 +21,7 @@ new_window pixel
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
-bindsym $mod+Ctrl+Return exec chromium
+bindsym $mod+Ctrl+Return exec chromium-continuous-bin
 
 bindsym $mod+Ctrl+m exec chromium https://gmail.com
 bindsym $mod+Ctrl+c exec chromium https://calendar.google.com
