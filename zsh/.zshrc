@@ -23,8 +23,6 @@ export PATH=${PATH}:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin
 export PATH=${PATH}:/usr/bin/core_perl
 export PATH=${PATH}:/usr/local/sbin
 export PATH=${PATH}:/usr/X11/bin
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
-export PATH="$PATH:$HOME/.gem/ruby/2.1.3/bin" # Add RVM to PATH for scripting
 
 
 export LC_ALL=en_US.UTF-8
@@ -43,4 +41,3 @@ alias pacman="pacman --color always"
 alias packer="packer-color --noedit"
 nvm use default
 
-source /home/fredrik/.rvm/scripts/rvm
