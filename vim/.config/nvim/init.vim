@@ -1,0 +1,89 @@
+let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+
+let g:python_host_prog='/usr/bin/python2'
+let g:python3_host_prog='/usr/bin/python3'
+
+call plug#begin('~/.vim/plugged')
+
+" NERDTree
+Plug 'scrooloose/nerdtree'
+
+" Fuzzy finder
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+
+" Built in terminal
+Plug 'kassio/neoterm'
+			
+" Cross file grep
+Plug 'mhinz/vim-grepper'
+
+" Send commands to term
+Plug 'jalvesaq/vimcmdline'
+
+" Cross file search
+Plug 'brooth/far.vim'
+
+" Status line
+Plug 'itchyny/lightline.vim'
+
+" Github activities
+Plug 'junegunn/vim-github-dashboard'
+
+" Tabular aligning
+Plug 'godlygeek/tabular'
+
+" Easy align
+Plug 'junegunn/vim-easy-align'
+
+" Commentary
+Plug 'tpope/vim-commentary'
+
+" Tmux integration
+Plug 'benmills/vimux'
+
+Plug 'lyla'
+
+" Language support
+Plug 'kchmck/vim-coffee-script' " coffee-script
+Plug 'gkz/vim-ls'		            " livescript
+Plug 'satyr/vim-coco'		        " coco
+
+Plug '~/src/yaflang/yaflang-vim'
+
+" Colorscheme
+Plug 'mhartington/oceanic-next'
+Plug 'joshdick/onedark.vim'     " Don't forget to symlink the colors for lightbar
+Plug 'agude/vim-eldar'
+
+call plug#end()
+
+set tabstop=2
+set shiftwidth=2
+set expandtab
+set smarttab
+
+colorscheme lyla
+" colorscheme onedark
+" let g:lightline = {
+"   \ 'colorscheme': 'onedark',
+"   \ }
+
+" Keymapping
+nmap <C-e> :NERDTreeToggle<CR>
+nmap <C-p> :FZF<CR>
+nmap <Leader>c :VimuxPromptCommand<CR>
+nmap <Leader>r :VimuxRunLastCommand<CR>
+nmap <Leader>p :VimuxTogglePane<CR>
+nmap <Leader>z :VimuxZoomRunner<CR>
+nmap <C-j> :VimuxScrollDownInspect<CR>
+nmap <C-k> :VimuxScrollUp<CR>
+
+" Start interactive EasyAlign in visual mode (e.g. vipga)
+xmap ga <Plug>(EasyAlign)
+
+" Start interactive EasyAlign for a motion/text object (e.g. gaip)
+nmap ga <Plug>(EasyAlign)
+
+let NERDTreeIgnore=['node_modules', '\.log$', 'README']
+
+autocmd BufNewFile,BufRead *.tol   set syntax=lisp
