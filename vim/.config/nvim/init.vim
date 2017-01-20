@@ -10,6 +10,7 @@ Plug 'scrooloose/nerdtree'
 
 " Fuzzy finder
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
 
 " Built in terminal
 Plug 'kassio/neoterm'
@@ -41,7 +42,10 @@ Plug 'tpope/vim-commentary'
 " Tmux integration
 Plug 'benmills/vimux'
 
-Plug 'lyla'
+" Git support
+Plug 'tpope/vim-fugitive'
+
+" Colorscheme
 
 " Language support
 Plug 'kchmck/vim-coffee-script' " coffee-script
@@ -51,6 +55,7 @@ Plug 'satyr/vim-coco'		        " coco
 Plug '~/src/yaflang/yaflang-vim'
 
 " Colorscheme
+Plug 'fsrc/lyla-vim'
 Plug 'mhartington/oceanic-next'
 Plug 'joshdick/onedark.vim'     " Don't forget to symlink the colors for lightbar
 Plug 'agude/vim-eldar'
@@ -67,6 +72,14 @@ colorscheme lyla
 " let g:lightline = {
 "   \ 'colorscheme': 'onedark',
 "   \ }
+
+function! VimuxSlime()
+  call VimuxSendText(@v)
+  call VimuxSendKeys("Enter")
+endfunction
+
+" If text is selected, save it in the v buffer and send that buffer it to tmux
+vmap <Leader>vs "vy :call VimuxSlime()<CR>
 
 " Keymapping
 nmap <C-e> :NERDTreeToggle<CR>

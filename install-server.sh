@@ -49,8 +49,8 @@ ensure_command zsh
 ensure_command vim
 ensure_command curl
 
-install_oh-my-zsh
-install_spf13-vim3
+# install_oh-my-zsh
+# install_spf13-vim3
 
 stow scripts
 stow git
