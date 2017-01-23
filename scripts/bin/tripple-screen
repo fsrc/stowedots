@@ -1,0 +1,7 @@
+#!/bin/sh
+
+xrandr --output eDP1 --mode 1920x1080 \
+       --output HDMI2 --mode 1920x1080 --right-of eDP1 --rotate normal \
+       --output HDMI1 --mode 1920x1080 --right-of HDMI2 --rotate left
+#nitrogen --restore
+       #--output HDMI1 --mode 2560x1440 --right-of eDP1 \

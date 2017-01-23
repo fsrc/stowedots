@@ -23,7 +23,12 @@ xset fp rehash
 #pasystray &
 #pa-applet &
 
+xrdb -merge -screens .Xdefaults
+
 export PATH=${PATH}:${HOME}/bin
+
+xinput --map-to-output $(xinput list --id-only "Wacom Co.,Ltd. Pen and multitouch sensor Finger touch") eDP1
+xinput --map-to-output $(xinput list --id-only "Wacom Co.,Ltd. Pen and multitouch sensor Pen stylus") eDP1
 
 # Launch window manager
 #exec ck-launch-session dbus-launch --sh-syntax --exit-with-session /usr/bin/xmonad

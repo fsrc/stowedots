@@ -21,16 +21,16 @@ new_window pixel
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
-bindsym $mod+Ctrl+Return exec chromium-continuous-bin
+bindsym $mod+Ctrl+Return exec chromium-snapshot-bin
 
-bindsym $mod+Ctrl+m exec chromium https://gmail.com
-bindsym $mod+Ctrl+c exec chromium https://calendar.google.com
-bindsym $mod+Ctrl+f exec chromium https://drive.google.com
-bindsym $mod+Ctrl+t exec chromium https://trello.com
+bindsym $mod+Ctrl+m exec chromium-snapshot-bin https://gmail.com
+bindsym $mod+Ctrl+c exec chromium-snapshot-bin https://calendar.google.com
+bindsym $mod+Ctrl+f exec chromium-snapshot-bin https://drive.google.com
+bindsym $mod+Ctrl+t exec chromium-snapshot-bin https://trello.com
 
 
 # start a terminal
-bindsym $mod+Shift+Return exec urxvtc #~/bin/term.sh
+bindsym $mod+Shift+Return exec ~/bin/st #urxvtc #~/bin/term.sh
 
 
 # kill focused window
@@ -134,22 +134,26 @@ bindsym $mod+Shift+E exit
 
 bindsym $mod+r exec i3-input -F 'rename workspace to %s' -P 'New name: '
 
+# Screen saver
+bindsym $mod+Ctrl+b exec i3lock-fancy -p
+
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
   status_command i3status
   colors {
-    separator #666666
-    background #222222
-    statusline #dddddd
-    focused_workspace #0088CC #0088CC #ffffff
-    active_workspace #333333 #333333 #ffffff
-    inactive_workspace #333333 #333333 #888888
-    urgent_workspace #2f343a #900000 #ffffff
+    separator #F0C674
+    background #1D1F21
+    statusline #DE935F
+    focused_workspace #81A2BE #5F819D #282A2E
+    active_workspace #8ABEB7 #5E8D87 #C5C8C6
+    inactive_workspace #707880 #282A2E #C5C8C6
+    urgent_workspace #CC6666 #A54242 #F0C674
   }
 }
-client.focused #0088CC #0088CC #ffffff #dddddd
-client.focused_inactive #333333 #333333 #888888 #292d2e
-client.unfocused #333333 #333333 #888888 #292d2e
-client.urgent #2f343a #900000 #ffffff #900000
+# class                 border  backgr. text    indicator child_border
+client.focused          #0088CC #0088CC #ffffff #dddddd   #81A2BE
+client.focused_inactive #333333 #333333 #888888 #292d2e   #5F819D
+client.unfocused        #333333 #333333 #888888 #292d2e   #373B41
+client.urgent           #2f343a #900000 #ffffff #900000   #CC6666
