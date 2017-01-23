@@ -1,11 +1,19 @@
 #!/bin/sh
 
-curr=$(cat /sys/class/backlight/intel_backlight/brightness)
+monitor=$(xbacklight -get)
+keyboard=$(cat /sys/class/leds/tpacpi::kbd_backlight/brightness)
 
-if [ $curr == "500" ] ; then
-  cat /sys/class/backlight/intel_backlight/max_brightness > /sys/class/backlight/intel_backlight/brightness
-  echo 0 > /sys/class/leds/smc::kbd_backlight/brightness
+echo "Current screen brightness $monitor, and keyboard $keyboard"
+
+if [ $monitor == "50.000000" ] ; then
+  xbacklight -set 100
+  echo 0 > /sys/class/leds/tpacpi::kbd_backlight/brightness
 else
-  echo 500 > /sys/class/backlight/intel_backlight/brightness
-  echo 30 > /sys/class/leds/smc::kbd_backlight/brightness
+  xbacklight -set 50
+  echo 1 > /sys/class/leds/tpacpi::kbd_backlight/brightness
 fi
+
+monitor=$(cat /sys/class/backlight/intel_backlight/brightness)
+keyboard=$(cat /sys/class/leds/tpacpi::kbd_backlight/brightness)
+
+echo "New screen brightness $monitor, and keyboard $keyboard"
