@@ -99,4 +99,15 @@ nmap ga <Plug>(EasyAlign)
 
 let NERDTreeIgnore=['node_modules', '\.log$', 'README']
 
+" Set correct syntax highlighting for TOL
 autocmd BufNewFile,BufRead *.tol   set syntax=lisp
+
+" Remove anoying trailing whitespaces on save
+fun! <SID>StripTrailingWhitespaces()
+    let l = line(".")
+    let c = col(".")
+    %s/\s\+$//e
+    call cursor(l, c)
+endfun
+
+autocmd FileType ruby,python,js,coffee,ls,co,vim autocmd BufWritePre <buffer> :call <SID>StripTrailingWhitespaces()
