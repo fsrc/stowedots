@@ -69,10 +69,6 @@ set expandtab
 set smarttab
 
 colorscheme lyla
-" colorscheme onedark
-" let g:lightline = {
-"   \ 'colorscheme': 'onedark',
-"   \ }
 
 function! VimuxSlime()
   call VimuxSendText(@v)
@@ -80,7 +76,7 @@ function! VimuxSlime()
 endfunction
 
 " If text is selected, save it in the v buffer and send that buffer it to tmux
-vmap <Leader>vs "vy :call VimuxSlime()<CR>
+vmap <C-g> "vy :call VimuxSlime()<CR>
 
 " Keymapping
 nmap <C-e> :NERDTreeToggle<CR>
@@ -91,6 +87,7 @@ nmap <Leader>p :VimuxTogglePane<CR>
 nmap <Leader>z :VimuxZoomRunner<CR>
 nmap <C-j> :VimuxScrollDownInspect<CR>
 nmap <C-k> :VimuxScrollUp<CR>
+
 
 " Start interactive EasyAlign in visual mode (e.g. vipga)
 xmap ga <Plug>(EasyAlign)

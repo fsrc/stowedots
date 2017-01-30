@@ -1,0 +1,1 @@
+ps axo pid,start,euser,lsession,cmd --sort=start_time | grep $1
