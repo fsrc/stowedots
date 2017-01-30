@@ -14,7 +14,7 @@ Plug 'junegunn/fzf.vim'
 
 " Built in terminal
 Plug 'kassio/neoterm'
-			
+
 " Cross file grep
 Plug 'mhinz/vim-grepper'
 
@@ -45,7 +45,8 @@ Plug 'benmills/vimux'
 " Git support
 Plug 'tpope/vim-fugitive'
 
-" Colorscheme
+" Window navigation with Tmux
+Plug 'christoomey/vim-tmux-navigator'
 
 " Language support
 Plug 'kchmck/vim-coffee-script' " coffee-script
@@ -54,7 +55,7 @@ Plug 'satyr/vim-coco'		        " coco
 
 Plug '~/src/yaflang/yaflang-vim'
 
-" Colorscheme
+" Colorschemes
 Plug 'fsrc/lyla-vim'
 Plug 'mhartington/oceanic-next'
 Plug 'joshdick/onedark.vim'     " Don't forget to symlink the colors for lightbar
@@ -68,10 +69,6 @@ set expandtab
 set smarttab
 
 colorscheme lyla
-" colorscheme onedark
-" let g:lightline = {
-"   \ 'colorscheme': 'onedark',
-"   \ }
 
 function! VimuxSlime()
   call VimuxSendText(@v)
@@ -79,7 +76,7 @@ function! VimuxSlime()
 endfunction
 
 " If text is selected, save it in the v buffer and send that buffer it to tmux
-vmap <Leader>vs "vy :call VimuxSlime()<CR>
+vmap <C-g> "vy :call VimuxSlime()<CR>
 
 " Keymapping
 nmap <C-e> :NERDTreeToggle<CR>
@@ -90,6 +87,7 @@ nmap <Leader>p :VimuxTogglePane<CR>
 nmap <Leader>z :VimuxZoomRunner<CR>
 nmap <C-j> :VimuxScrollDownInspect<CR>
 nmap <C-k> :VimuxScrollUp<CR>
+
 
 " Start interactive EasyAlign in visual mode (e.g. vipga)
 xmap ga <Plug>(EasyAlign)
@@ -111,3 +109,12 @@ fun! <SID>StripTrailingWhitespaces()
 endfun
 
 autocmd FileType ruby,python,js,coffee,ls,co,vim autocmd BufWritePre <buffer> :call <SID>StripTrailingWhitespaces()
+
+set splitbelow
+set splitright
+
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
