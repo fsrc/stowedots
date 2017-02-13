@@ -1,3 +1,5 @@
+zle -N zle-line-init
+
 source ${HOME}/.zplug/init.zsh
 
 # Theme
