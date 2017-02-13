@@ -1,6 +1,0 @@
-Bundle 'digitaltoad/vim-jade'
-Bundle 'guns/vim-clojure-static'
-Bundle 'tpope/vim-fireplace'
-Bundle 'tpope/vim-classpath'
-Bundle 'masukomi/rainbow_parentheses.vim'
-Bundle 'mintplant/vim-literate-coffeescript'

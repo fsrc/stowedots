@@ -78,8 +78,11 @@ alias l="k -h"
 
 #nvm use default
 
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
+
 bindkey '^P' fuzzy-search-and-edit
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+

@@ -46,14 +46,14 @@ Plug 'benmills/vimux'
 Plug 'tpope/vim-fugitive'
 
 " Window navigation with Tmux
-Plug 'christoomey/vim-tmux-navigator'
+"Plug 'christoomey/vim-tmux-navigator'
 
 " Language support
 Plug 'kchmck/vim-coffee-script' " coffee-script
 Plug 'gkz/vim-ls'		            " livescript
 Plug 'satyr/vim-coco'		        " coco
 
-Plug '~/src/yaflang/yaflang-vim'
+" Plug '~/src/yaflang/yaflang-vim'
 
 " Colorschemes
 Plug 'fsrc/lyla-vim'
@@ -113,8 +113,8 @@ autocmd FileType ruby,python,js,coffee,ls,co,vim autocmd BufWritePre <buffer> :c
 set splitbelow
 set splitright
 
-nnoremap <C-J> <C-W><C-J>
-nnoremap <C-K> <C-W><C-K>
-nnoremap <C-L> <C-W><C-L>
-nnoremap <C-H> <C-W><C-H>
+nnoremap <M-j> <C-w>j
+nnoremap <M-k> <C-w>k
+nnoremap <M-l> <C-w>l
+nnoremap <M-h> <C-w>h
 
