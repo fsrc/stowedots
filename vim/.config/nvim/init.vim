@@ -3,7 +3,8 @@ let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 let g:python_host_prog='/usr/bin/python2'
 let g:python3_host_prog='/usr/bin/python3'
 
-call plug#begin('~/.vim/plugged')
+call plug#begin('~/.cache/vim/plugged')
+
 
 " NERDTree
 Plug 'scrooloose/nerdtree'
@@ -63,6 +64,8 @@ Plug 'agude/vim-eldar'
 
 call plug#end()
 
+let NERDTreeBookmarksFile=expand("$HOME/.cache/NERDTreeBookmarks")
+
 set tabstop=2
 set shiftwidth=2
 set expandtab
@@ -118,3 +121,4 @@ nnoremap <M-k> <C-w>k
 nnoremap <M-l> <C-w>l
 nnoremap <M-h> <C-w>h
 
+set viminfo='1000,n~/.cache/viminfo
