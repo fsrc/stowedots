@@ -1,12 +1,15 @@
 zle -N zle-line-init
 
-source ${HOME}/.zplug/init.zsh
+
+if [[ ! -d ${ZPLUG_HOME} ]]; then
+    git clone https://github.com/zplug/zplug ${ZPLUG_HOME}
+    source ${ZPLUG_HOME}/init.zsh && zplug update --self
+fi
+
+source ${ZPLUG_HOME}/init.zsh
 
 # Theme
 zplug "dracula/zsh", as:theme
-
-# Better history search
-zplug "zsh-users/zsh-history-substring-search"
 
 # Jump to directories
 zplug "wting/autojump"
@@ -40,6 +43,14 @@ zplug "supercrabtree/k"
 # Blackbox (encrypted credentials in repositories)
 zplug 'StackExchange/blackbox'
 
+
+# Syntax highlighting on the command line
+zplug "zsh-users/zsh-syntax-highlighting"
+
+# Better history search
+zplug "zsh-users/zsh-history-substring-search"
+
+
 # Install plugins if there are plugins that have not been installed
 if ! zplug check --verbose; then
     printf "Install? [y/N]: "
@@ -58,9 +69,7 @@ export PATH=${PATH}:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin
 export PATH=${PATH}:/usr/bin/core_perl
 export PATH=${PATH}:/usr/local/sbin
 export PATH=${PATH}:/usr/X11/bin
-
-export GOPATH=${HOME}/go
-
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
@@ -77,14 +86,16 @@ alias packer="packer-color --noedit"
 alias vim="nvim"
 alias ls="ls --color=always"
 alias l="k -h"
+alias kat=pygmentize
+alias tmux="tmux -f ~/.config/tmux/config"
 
 #nvm use default
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 
 bindkey '^P' fuzzy-search-and-edit
+bindkey -M vicmd 'k' history-substring-search-up
+bindkey -M vicmd 'j' history-substring-search-down
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
