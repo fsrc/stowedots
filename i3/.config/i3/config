@@ -9,7 +9,7 @@
 #
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
-set $mod Mod4
+set $mod Mod1
 
 # font for window titles. ISO 10646 = Unicode
 focus_follows_mouse no
@@ -24,7 +24,7 @@ floating_modifier $mod
 
 # start a terminal
 bindsym $mod+Shift+Return exec ~/bin/st #urxvtc #~/bin/term.sh
-bindsym $mod+Ctrl+Return exec chromium-snapshot-bin
+bindsym $mod+Ctrl+Return exec chromium
 
 
 # kill focused window
@@ -34,10 +34,18 @@ bindsym $mod+Shift+Q kill
 bindsym $mod+Ctrl+d exec dmenu_run
 
 # change focus
-bindsym $mod+h focus left
-bindsym $mod+j focus down
-bindsym $mod+k focus up
-bindsym $mod+l focus right
+# bindsym $mod+h focus left
+# bindsym $mod+j focus down
+# bindsym $mod+k focus up
+# bindsym $mod+l focus right
+bindsym $mod+h exec --no-startup-id ~/bin/i3/left
+bindsym $mod+j exec --no-startup-id ~/bin/i3/down
+bindsym $mod+k exec --no-startup-id ~/bin/i3/up
+bindsym $mod+l exec --no-startup-id ~/bin/i3/right
+
+# focus the parent container
+bindsym $mod+n exec --no-startup-id ~/bin/i3/next-chromium
+bindsym $mod+m exec --no-startup-id ~/bin/i3/next-terminal
 
 # move focused window
 bindsym $mod+Shift+H move left
@@ -74,10 +82,8 @@ bindsym $mod+Shift+space floating toggle
 # change focus between tiling / floating windows
 bindsym $mod+space focus mode_toggle
 
-# focus the parent container
-bindsym $mod+a focus parent # focus the child container bindcode $mod+d focus child
 
-exec --no-startup-id exec /home/fredrik/bin/keyrate.sh
+exec --no-startup-id /home/fredrik/bin/keyrate.sh
 
 # switch to workspace
 bindsym $mod+1 workspace number 1
@@ -106,7 +112,6 @@ bindsym $mod+Shift+parenright move container to workspace 10
 # toggle language input
 bindsym $mod+Ctrl+space exec /home/fredrik/bin/toggle-lang.sh
 # toggle touch
-bindsym Mod1+Shift+Space exec /home/fredrik/bin/toggle-touch.sh
 
 # reload the configuration file
 bindsym $mod+Shift+C reload
