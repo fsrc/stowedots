@@ -5,4 +5,5 @@ alias ls="ls --color=always"
 alias l="k -h"
 alias kat=pygmentize
 alias tmux="tmux -f ~/.config/tmux/config"
-
+alias o="nvr -o"
+alias O="nvr -O"
