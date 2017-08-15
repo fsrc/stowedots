@@ -52,6 +52,7 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'kchmck/vim-coffee-script' " coffee-script
 Plug 'gkz/vim-ls'		            " livescript
 Plug 'satyr/vim-coco'		        " coco
+Plug 'satyr/vim-json'		        " JSON
 
 Plug '~/src/yaflang/yaflang-vim'
 
