@@ -9,7 +9,8 @@
 #
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
-set $mod Mod1
+#set $mod Mod1
+set $mod Mod4
 
 # font for window titles. ISO 10646 = Unicode
 focus_follows_mouse no
@@ -23,7 +24,7 @@ floating_modifier $mod
 
 
 # start a terminal
-bindsym $mod+Shift+Return exec ~/bin/st #urxvtc #~/bin/term.sh
+bindsym $mod+Shift+Return exec ~/bin/st #urxvtc /usr/bin/nvim-qt --nofork -- -c ":te" # #~/bin/term.sh
 bindsym $mod+Ctrl+Return exec chromium
 
 
@@ -46,6 +47,7 @@ bindsym $mod+l exec --no-startup-id ~/bin/i3/right
 # focus the parent container
 bindsym $mod+n exec --no-startup-id ~/bin/i3/next-chromium
 bindsym $mod+m exec --no-startup-id ~/bin/i3/next-terminal
+bindsym $mod+i exec nvim-qt
 
 # move focused window
 bindsym $mod+Shift+H move left
@@ -98,16 +100,16 @@ bindsym $mod+9 workspace number 9
 bindsym $mod+0 workspace number 10
 
 # move focused container to workspace
-bindsym $mod+Shift+exclam move container to workspace 1
-bindsym $mod+Shift+at move container to workspace 2
-bindsym $mod+Shift+numbersign move container to workspace 3
-bindsym $mod+Shift+dollar move container to workspace 4
-bindsym $mod+Shift+percent move container to workspace 5
-bindsym $mod+Shift+asciicircum move container to workspace 6
-bindsym $mod+Shift+ampersand move container to workspace 7
-bindsym $mod+Shift+asterisk move container to workspace 8
-bindsym $mod+Shift+parenleft move container to workspace 9
-bindsym $mod+Shift+parenright move container to workspace 10
+bindcode $mod+Shift+10 move container to workspace 1
+bindcode $mod+Shift+11 move container to workspace 2
+bindcode $mod+Shift+12 move container to workspace 3
+bindcode $mod+Shift+13 move container to workspace 4
+bindcode $mod+Shift+14 move container to workspace 5
+bindcode $mod+Shift+15 move container to workspace 6
+bindcode $mod+Shift+16 move container to workspace 7
+bindcode $mod+Shift+17 move container to workspace 8
+bindcode $mod+Shift+18 move container to workspace 9
+bindcode $mod+Shift+19 move container to workspace 10
 
 # toggle language input
 bindsym $mod+Ctrl+space exec /home/fredrik/bin/toggle-lang.sh

@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+MYVIFMRC=${HOME}/.config/vifm/nvim-vifmrc we vifm ${PWD}

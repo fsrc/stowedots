@@ -40,19 +40,26 @@ Plug 'junegunn/vim-easy-align'
 " Commentary
 Plug 'tpope/vim-commentary'
 
-" Tmux integration
-Plug 'benmills/vimux'
-
 " Git support
 Plug 'tpope/vim-fugitive'
 
-" Window navigation with Tmux
-"Plug 'christoomey/vim-tmux-navigator'
+" Better control over terminal buffers
+Plug 'mklabs/split-term.vim'
+
+" File manager instead of nerdtree
+" Plug 'vifm/neovim-vifm'
+
+" JSON stuff
+Plug 'elzr/vim-json'
+Plug 'XadillaX/json-formatter.vim'
+
 
 " Language support
 Plug 'kchmck/vim-coffee-script' " coffee-script
 Plug 'gkz/vim-ls'		            " livescript
 Plug 'satyr/vim-coco'		        " coco
+Plug 'tpope/vim-haml'           " haml
+Plug '4Evergreen4/vim-hardy'    " Arduino
 
 " Plug '~/src/yaflang/yaflang-vim'
 
@@ -73,24 +80,10 @@ set smarttab
 
 colorscheme lyla
 
-function! VimuxSlime()
-  call VimuxSendText(@v)
-  call VimuxSendKeys("Enter")
-endfunction
-
-" If text is selected, save it in the v buffer and send that buffer it to tmux
-vmap <C-g> "vy :call VimuxSlime()<CR>
-
 " Keymapping
-nmap <C-e> :NERDTreeToggle<CR>
+"nmap <C-e> :VifmToggle ./<CR>
+nmap <C-e> :!nvim-vifm<CR>
 nmap <C-p> :FZF<CR>
-nmap <Leader>c :VimuxPromptCommand<CR>
-nmap <Leader>r :VimuxRunLastCommand<CR>
-nmap <Leader>p :VimuxTogglePane<CR>
-nmap <Leader>z :VimuxZoomRunner<CR>
-nmap <C-j> :VimuxScrollDownInspect<CR>
-nmap <C-k> :VimuxScrollUp<CR>
-
 
 " Start interactive EasyAlign in visual mode (e.g. vipga)
 xmap ga <Plug>(EasyAlign)
@@ -111,7 +104,7 @@ fun! <SID>StripTrailingWhitespaces()
     call cursor(l, c)
 endfun
 
-autocmd FileType ruby,python,js,coffee,ls,co,vim autocmd BufWritePre <buffer> :call <SID>StripTrailingWhitespaces()
+autocmd FileType ruby,python,js,coffee,ls,co,vim,sh,json autocmd BufWritePre <buffer> :call <SID>StripTrailingWhitespaces()
 
 set splitbelow
 set splitright
@@ -121,4 +114,11 @@ nnoremap <M-k> <C-w>k
 nnoremap <M-l> <C-w>l
 nnoremap <M-h> <C-w>h
 
+tnoremap <M-j> <C-\><C-n><C-w>j
+tnoremap <M-k> <C-\><C-n><C-w>k
+tnoremap <M-l> <C-\><C-n><C-w>l
+tnoremap <M-h> <C-\><C-n><C-w>h
+
 set viminfo='1000,n~/.cache/viminfo
+set belloff=all
+set conseallevel=0
