@@ -1,7 +1,8 @@
 ! Urxvt ---------------------------------------------------------------
-*font: xft:DejaVu Sans Mono for Powerline:antialias=true:pixelsize=15
+!*font: xft:DejaVu Sans Mono:antialias=true:pixelsize=15
 !*boldFont:xft:DejaVu Sans Mono for Powerline:style=bold:antialias=true:pixelsize=11
 
+URxvt.font: xft:Droid Sans Mono Slashed for Powerline:size=10
 URxvt*letterSpace: -1
 URxvt*lineSpace: 3
 

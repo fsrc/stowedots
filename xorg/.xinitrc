@@ -33,8 +33,8 @@ xinput --map-to-output $(xinput list --id-only "Wacom Co.,Ltd. Pen and multitouc
 # Launch window manager
 #exec ck-launch-session dbus-launch --sh-syntax --exit-with-session /usr/bin/xmonad
 #exec xmonad
-#exec i3
-eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh)
+exec i3
+# eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh)
 
-exec gnome-session --session=i3-gnome
+# exec gnome-session --session=i3-gnome
 #exec i3-gnome
