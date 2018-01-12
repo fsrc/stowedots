@@ -11,7 +11,7 @@ order = "disk /"
 order += "disk /home"
 #order += "disk /home/fredrik/work"
 #order += "ethernet eth0"
-order += "wireless wlp4s0"
+order += "wireless wifi0"
 #order += "cpu_temperature 0"
 #order += "cpu_temperature 1"
 #order += "cpu_temperature 2"
@@ -32,9 +32,9 @@ battery 0 {
   #format_up = "E: %ip"
   #format_down = "E:"
 #}
-wireless wlp4s0 {
+wireless wifi0 {
   # if you use %speed, i3status requires the cap_net_admin capability
-  format_up = "W: (%quality @ %essid, %bitrate) %ip"
+  format_up = "W:%quality @ %essid %bitrate [%ip]"
   format_down = "W: down"
 }
 

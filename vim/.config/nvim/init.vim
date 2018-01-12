@@ -9,6 +9,9 @@ call plug#begin('~/.cache/vim/plugged')
 " NERDTree
 Plug 'scrooloose/nerdtree'
 
+" Neocomplete
+Plug 'Valloric/YouCompleteMe'
+
 " Fuzzy finder
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
@@ -53,6 +56,15 @@ Plug 'tpope/vim-fugitive'
 Plug 'kchmck/vim-coffee-script' " coffee-script
 Plug 'gkz/vim-ls'		            " livescript
 Plug 'satyr/vim-coco'		        " coco
+Plug 'stevearc/vim-arduino'     " arduino
+let g:arduino_dir="/usr/share/arduino"
+nnoremap <buffer> <Leader>am :ArduinoVerify<CR>
+nnoremap <buffer> <Leader>au :ArduinoUpload<CR>
+nnoremap <buffer> <Leader>ad :ArduinoUploadAndSerial<CR>
+nnoremap <buffer> <Leader>ab :ArduinoChooseBoard<CR>
+nnoremap <buffer> <Leader>ap :ArduinoChooseProgrammer<CR>
+
+Plug 'sudar/vim-arduino-syntax'
 
 " Plug '~/src/yaflang/yaflang-vim'
 
@@ -120,5 +132,6 @@ nnoremap <M-j> <C-w>j
 nnoremap <M-k> <C-w>k
 nnoremap <M-l> <C-w>l
 nnoremap <M-h> <C-w>h
+
 
 set viminfo='1000,n~/.cache/viminfo
