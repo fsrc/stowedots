@@ -26,6 +26,7 @@ floating_modifier $mod
 # start a terminal
 bindsym $mod+Shift+Return exec ~/bin/st #urxvtc /usr/bin/nvim-qt --nofork -- -c ":te" # #~/bin/term.sh
 bindsym $mod+Ctrl+Return exec chromium
+bindsym $mod+n exec rse new
 
 
 # kill focused window
@@ -44,10 +45,6 @@ bindsym $mod+j exec --no-startup-id ~/bin/i3/down
 bindsym $mod+k exec --no-startup-id ~/bin/i3/up
 bindsym $mod+l exec --no-startup-id ~/bin/i3/right
 
-# focus the parent container
-bindsym $mod+n exec --no-startup-id ~/bin/i3/next-chromium
-bindsym $mod+m exec --no-startup-id ~/bin/i3/next-terminal
-bindsym $mod+i exec nvim-qt
 
 # move focused window
 bindsym $mod+Shift+H move left
