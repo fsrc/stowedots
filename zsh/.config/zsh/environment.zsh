@@ -1,5 +1,5 @@
 export GOPATH=${HOME}/go
-export PATH=${PATH}:${HOME}/bin:${GOPATH//://bin:}/bin
+export PATH=${PATH}:${HOME}/bin:PATH=${PATH}:${GOPATH//://bin:}/bin
 export PATH=${PATH}:${HOME}/.mos/bin
 
 export PATH=${PATH}:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin
@@ -10,7 +10,7 @@ export PATH=${PATH}:/usr/X11/bin
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
-export VISUAL=vim
+export VISUAL=less
 export EDITOR=vim
 
 export NLS_LANG="AMERICAN_AMERICA.UTF8"
