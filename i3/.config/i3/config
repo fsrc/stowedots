@@ -25,7 +25,8 @@ floating_modifier $mod
 # start a terminal
 bindsym $mod+Shift+Return exec ~/bin/st #urxvtc #~/bin/term.sh
 bindsym $mod+Ctrl+Return exec chromium
-
+bindsym $mod+o exec rse -d open
+bindsym $mod+n exec rse new
 
 # kill focused window
 bindsym $mod+Shift+Q kill
@@ -44,10 +45,6 @@ bindsym $mod+l focus right
 # bindsym $mod+k exec --no-startup-id ~/bin/i3/up
 # bindsym $mod+l exec --no-startup-id ~/bin/i3/right
 
-# focus the parent container
-bindsym $mod+n exec --no-startup-id ~/bin/i3/next-chromium
-bindsym $mod+m exec --no-startup-id ~/bin/i3/next-terminal
-
 # move focused window
 bindsym $mod+Shift+H move left
 bindsym $mod+Shift+J move down
@@ -55,13 +52,13 @@ bindsym $mod+Shift+K move up
 bindsym $mod+Shift+L move right
 
 # Pressing left will shrink the window’s width.
-bindsym $mod+Ctrl+h resize shrink width        6 px or 6 ppt
+bindsym $mod+Ctrl+h resize shrink width        2 px or 2 ppt
 # Pressing right will grow the window’s width.
-bindsym $mod+Ctrl+j resize grow height         6 px or 6 ppt
+bindsym $mod+Ctrl+j resize grow height         2 px or 2 ppt
 # Pressing up will shrink the window’s height.
-bindsym $mod+Ctrl+k resize shrink height       6 px or 6 ppt
+bindsym $mod+Ctrl+k resize shrink height       2 px or 2 ppt
 # Pressing down will grow the window’s height.
-bindsym $mod+Ctrl+l resize grow width          6 px or 6 ppt
+bindsym $mod+Ctrl+l resize grow width          2 px or 2 ppt
 
 # split in horizontal orientation
 bindsym $mod+Shift+V split h
