@@ -1,0 +1,7 @@
+#!/bin/bash
+
+. /home/fredrik/.nvm/nvm.sh
+
+nvm use 4.0
+
+nwm > ~/nwm.log
