@@ -12,6 +12,9 @@ Plug 'scrooloose/nerdtree'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 
+Plug 'mileszs/ack.vim'
+let g:ackprg = 'ag --nogroup --nocolor --column'
+
 " Built in terminal
 Plug 'kassio/neoterm'
 
@@ -36,23 +39,38 @@ Plug 'godlygeek/tabular'
 " Easy align
 Plug 'junegunn/vim-easy-align'
 
+" Colorscheme changer
+Plug 'xolox/vim-colorscheme-switcher'
+
+" Dasherize and other simplifiers
+Plug 'farfanoide/inflector.vim'
+
+" TAGS
+set tags=./tags;/
+Plug 'ludovicchabant/vim-gutentags'
+Plug 'vim-scripts/TagHighlight'
+
+" Plug 'xolox/vim-easytags'
+Plug 'xolox/vim-misc'
+" let g:easytags_dynamic_files = 1
+" let b:easytags_cmd = '/usr/bin/ctags'
+
 " Commentary
 Plug 'tpope/vim-commentary'
-
-" Tmux integration
-Plug 'benmills/vimux'
 
 " Git support
 Plug 'tpope/vim-fugitive'
 
-" Window navigation with Tmux
-Plug 'christoomey/vim-tmux-navigator'
+" Git support
+Plug 'digitaltoad/vim-pug'
 
 " Language support
-Plug 'kchmck/vim-coffee-script' " coffee-script
-Plug 'gkz/vim-ls'		            " livescript
-Plug 'satyr/vim-coco'		        " coco
-Plug 'satyr/vim-json'		        " JSON
+Plug 'sheerun/vim-polyglot'
+Plug 'lfe-support/vim-lfe'
+" Plug 'kchmck/vim-coffee-script' " coffee-script
+" Plug 'gkz/vim-ls'		            " livescript
+" Plug 'satyr/vim-coco'		        " coco
+" Plug 'satyr/vim-json'		        " JSON
 
 Plug '~/src/yaflang/yaflang-vim'
 
@@ -61,6 +79,7 @@ Plug 'fsrc/lyla-vim'
 Plug 'mhartington/oceanic-next'
 Plug 'joshdick/onedark.vim'     " Don't forget to symlink the colors for lightbar
 Plug 'agude/vim-eldar'
+Plug 'goirijo/vim-jgg-colorscheme'
 
 call plug#end()
 
@@ -69,25 +88,11 @@ set shiftwidth=2
 set expandtab
 set smarttab
 
-colorscheme lyla
-
-function! VimuxSlime()
-  call VimuxSendText(@v)
-  call VimuxSendKeys("Enter")
-endfunction
-
-" If text is selected, save it in the v buffer and send that buffer it to tmux
-vmap <C-g> "vy :call VimuxSlime()<CR>
+colorscheme jgg
 
 " Keymapping
 nmap <C-e> :NERDTreeToggle<CR>
 nmap <C-p> :FZF<CR>
-nmap <Leader>c :VimuxPromptCommand<CR>
-nmap <Leader>r :VimuxRunLastCommand<CR>
-nmap <Leader>p :VimuxTogglePane<CR>
-nmap <Leader>z :VimuxZoomRunner<CR>
-nmap <C-j> :VimuxScrollDownInspect<CR>
-nmap <C-k> :VimuxScrollUp<CR>
 
 
 " Start interactive EasyAlign in visual mode (e.g. vipga)
@@ -114,8 +119,41 @@ autocmd FileType ruby,python,js,coffee,ls,co,vim autocmd BufWritePre <buffer> :c
 set splitbelow
 set splitright
 
-nnoremap <C-J> <C-W><C-J>
-nnoremap <C-K> <C-W><C-K>
-nnoremap <C-L> <C-W><C-L>
-nnoremap <C-H> <C-W><C-H>
+nnoremap <C-j> <C-W><C-J>
+nnoremap <C-k> <C-W><C-K>
+nnoremap <C-l> <C-W><C-L>
+nnoremap <C-h> <C-W><C-H>
+
+" Ctrl-S to save
+nnoremap <C-S> :w<CR>
+
+nnoremap <C-c> :LiveScriptCompile<CR>
+vmap <C-c> :LiveScriptCompile<CR>
+
+" Lightline
+set laststatus=2
+set noshowmode
+
+function! HeadOfPath()
+  return expand('%:p:h:t')
+endfunction
+
+let g:lightline = {
+  \ 'colorscheme': 'Dracula',
+  \ 'active' : {
+  \   'left': [ [ 'mode', 'paste' ],
+  \             [ 'readonly', 'filename', 'path', 'modified', 'helloworld' ] ],
+  \   'right': [ [ 'lineinfo' ],
+  \              [ 'percent' ],
+  \              [ 'fileformat', 'fileencoding', 'filetype', 'charvaluehex' ] ]
+  \ },
+  \ 'component': {
+  \   'charvaluehex': '0x%B',
+  \   'path': "expand('%:p:h:t')"
+  \ },
+  \ 'component_function': {
+  \   'path': 'HeadOfPath'
+  \ },
+  \ }
+
 

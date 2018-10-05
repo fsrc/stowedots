@@ -1,0 +1,125 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+$NVIM_TUI_ENABLE_TRUE_COLOR	vim/.config/nvim/init.vim	/^let $NVIM_TUI_ENABLE_TRUE_COLOR=1$/;"	v
+<C-S>	vim/.config/nvim/init.vim	/^nnoremap <C-S> :w<CR>$/;"	m
+<C-c>	vim/.config/nvim/init.vim	/^nnoremap <C-c> :LiveScriptCompile<CR>$/;"	m
+<C-c>	vim/.config/nvim/init.vim	/^vmap <C-c> :LiveScriptCompile<CR>$/;"	m
+<C-e>	vim/.config/nvim/init.vim	/^nmap <C-e> :NERDTreeToggle<CR>$/;"	m
+<C-h>	vim/.config/nvim/init.vim	/^nnoremap <C-h> <C-W><C-H>$/;"	m
+<C-j>	vim/.config/nvim/init.vim	/^nnoremap <C-j> <C-W><C-J>$/;"	m
+<C-k>	vim/.config/nvim/init.vim	/^nnoremap <C-k> <C-W><C-K>$/;"	m
+<C-l>	vim/.config/nvim/init.vim	/^nnoremap <C-l> <C-W><C-L>$/;"	m
+<C-p>	vim/.config/nvim/init.vim	/^nmap <C-p> :FZF<CR>$/;"	m
+HeadOfPath	vim/.config/nvim/init.vim	/^function! HeadOfPath()$/;"	f
+NERDTreeIgnore	vim/.config/nvim/init.vim	/^let NERDTreeIgnore=['node_modules', '\\.log$', 'README']$/;"	v
+StripTrailingWhitespaces	vim/.config/nvim/init.vim	/^fun! <SID>StripTrailingWhitespaces()$/;"	f
+_assert_no_path_cycles	scripts/bin/kerl	/^_assert_no_path_cycles() {$/;"	f
+_canonicalize_dir_path	scripts/bin/kerl	/^_canonicalize_dir_path() {$/;"	f
+_canonicalize_file_path	scripts/bin/kerl	/^_canonicalize_file_path() {$/;"	f
+_check_dpkg	scripts/bin/kerl	/^_check_dpkg()$/;"	f
+_check_required_pkgs	scripts/bin/kerl	/^_check_required_pkgs()$/;"	f
+_check_rpm	scripts/bin/kerl	/^_check_rpm()$/;"	f
+_do_build	scripts/bin/kerl	/^_do_build()$/;"	f
+_dpkg_is_installed	scripts/bin/kerl	/^_dpkg_is_installed()$/;"	f
+_flags	scripts/bin/kerl	/^_flags()$/;"	f
+_kerl_remove_el	scripts/bin/kerl	/^function _kerl_remove_el --description 'remove element from array'$/;"	f
+_prepend_dir_context_if_necessary	scripts/bin/kerl	/^_prepend_dir_context_if_necessary() {$/;"	f
+_prepend_path_if_relative	scripts/bin/kerl	/^_prepend_path_if_relative() {$/;"	f
+_resolve_symlinks	scripts/bin/kerl	/^_resolve_symlinks() {$/;"	f
+_rpm_is_installed	scripts/bin/kerl	/^_rpm_is_installed()$/;"	f
+_zsh_highlight_highlight_string	scripts/bin/zsh-syntax-highlighting.zsh	/^_zsh_highlight_highlight_string() {$/;"	f
+apply_darwin_compiler_patch	scripts/bin/kerl	/^apply_darwin_compiler_patch()$/;"	f
+apply_javadoc_linting_patch	scripts/bin/kerl	/^apply_javadoc_linting_patch()$/;"	f
+apply_r14_beam_makeops_patch	scripts/bin/kerl	/^apply_r14_beam_makeops_patch()$/;"	f
+apply_r15_beam_makeops_patch	scripts/bin/kerl	/^apply_r15_beam_makeops_patch()$/;"	f
+apply_r16_wx_ptr_patch	scripts/bin/kerl	/^apply_r16_wx_ptr_patch()$/;"	f
+apply_solaris_networking_patch	scripts/bin/kerl	/^apply_solaris_networking_patch()$/;"	f
+apply_wx_ptr_patch	scripts/bin/kerl	/^apply_wx_ptr_patch()$/;"	f
+apply_zlib_patch	scripts/bin/kerl	/^apply_zlib_patch()$/;"	f
+assert_build_name_unused	scripts/bin/kerl	/^assert_build_name_unused()$/;"	f
+assert_perl	scripts/bin/kerl	/^assert_perl()$/;"	f
+assert_valid_installation	scripts/bin/kerl	/^assert_valid_installation()$/;"	f
+assert_valid_release	scripts/bin/kerl	/^assert_valid_release()$/;"	f
+build_plt	scripts/bin/kerl	/^build_plt()$/;"	f
+canonicalize_path	scripts/bin/kerl	/^canonicalize_path() {$/;"	f
+check_releases	scripts/bin/kerl	/^check_releases()$/;"	f
+cleanup_usage	scripts/bin/kerl	/^cleanup_usage()$/;"	f
+delete_usage	scripts/bin/kerl	/^delete_usage()$/;"	f
+do_active	scripts/bin/kerl	/^do_active()$/;"	f
+do_deploy	scripts/bin/kerl	/^do_deploy()$/;"	f
+do_git_build	scripts/bin/kerl	/^do_git_build()$/;"	f
+do_install	scripts/bin/kerl	/^do_install()$/;"	f
+do_normal_build	scripts/bin/kerl	/^do_normal_build()$/;"	f
+do_plt	scripts/bin/kerl	/^do_plt()$/;"	f
+download	scripts/bin/kerl	/^download()$/;"	f
+download_htmldocs	scripts/bin/kerl	/^download_htmldocs()$/;"	f
+download_manpages	scripts/bin/kerl	/^download_manpages()$/;"	f
+ensure_checksum_file	scripts/bin/kerl	/^ensure_checksum_file()$/;"	f
+ensure_command	install-base.sh	/^ensure_command() {$/;"	f
+ensure_command	install-server.sh	/^ensure_command() {$/;"	f
+fish_prompt	scripts/bin/kerl	/^    function fish_prompt$/;"	f
+g:ackprg	vim/.config/nvim/init.vim	/^let g:ackprg = 'ag --nogroup --nocolor --column'$/;"	v
+g:lightline	vim/.config/nvim/init.vim	/^let g:lightline = {$/;"	v
+g:python3_host_prog	vim/.config/nvim/init.vim	/^let g:python3_host_prog='\/usr\/bin\/python3'$/;"	v
+g:python_host_prog	vim/.config/nvim/init.vim	/^let g:python_host_prog='\/usr\/bin\/python2'$/;"	v
+ga	vim/.config/nvim/init.vim	/^nmap ga <Plug>(EasyAlign)$/;"	m
+get_active_path	scripts/bin/kerl	/^get_active_path()$/;"	f
+get_git_releases	scripts/bin/kerl	/^get_git_releases()$/;"	f
+get_install_path_from_name	scripts/bin/kerl	/^get_install_path_from_name()$/;"	f
+get_javac_version	scripts/bin/kerl	/^get_javac_version()$/;"	f
+get_name_from_install_path	scripts/bin/kerl	/^get_name_from_install_path()$/;"	f
+get_newest_valid_release	scripts/bin/kerl	/^get_newest_valid_release()$/;"	f
+get_otp_version	scripts/bin/kerl	/^get_otp_version()$/;"	f
+get_perl_version	scripts/bin/kerl	/^get_perl_version()$/;"	f
+get_release_from_name	scripts/bin/kerl	/^get_release_from_name()$/;"	f
+get_releases	scripts/bin/kerl	/^get_releases()$/;"	f
+get_tarball_releases	scripts/bin/kerl	/^get_tarball_releases()$/;"	f
+github_download	scripts/bin/kerl	/^github_download()$/;"	f
+has	scripts/bin/gle-performance	/^function has-8-cores {$/;"	f
+has	scripts/bin/gle-performance	/^function has-ssh {$/;"	f
+install_command	install-base.sh	/^install_command() {$/;"	f
+install_command	install-server.sh	/^install_command() {$/;"	f
+install_docsh	scripts/bin/kerl	/^install_docsh() {$/;"	f
+install_nodejs	install-base.sh	/^install_nodejs() {$/;"	f
+install_nodejs	install-server.sh	/^install_nodejs() {$/;"	f
+is_valid_install_path	scripts/bin/kerl	/^is_valid_install_path()$/;"	f
+is_valid_installation	scripts/bin/kerl	/^is_valid_installation()$/;"	f
+is_valid_release	scripts/bin/kerl	/^is_valid_release()$/;"	f
+kb_light_set	scripts/bin/backlight.py	/^def kb_light_set(delta):$/;"	f
+kerl_deactivate	scripts/bin/kerl	/^function kerl_deactivate --description "deactivate erlang environment"$/;"	f
+kerl_deactivate	scripts/bin/kerl	/^kerl_deactivate()$/;"	f
+list_add	scripts/bin/kerl	/^list_add()$/;"	f
+list_has	scripts/bin/kerl	/^list_has()$/;"	f
+list_print	scripts/bin/kerl	/^list_print()$/;"	f
+list_remove	scripts/bin/kerl	/^list_remove()$/;"	f
+list_usage	scripts/bin/kerl	/^list_usage()$/;"	f
+make_filename	scripts/bin/kerl	/^make_filename()$/;"	f
+maybe_patch	scripts/bin/kerl	/^maybe_patch()$/;"	f
+maybe_patch_all	scripts/bin/kerl	/^maybe_patch_all()$/;"	f
+maybe_patch_darwin	scripts/bin/kerl	/^maybe_patch_darwin()$/;"	f
+maybe_patch_sunos	scripts/bin/kerl	/^maybe_patch_sunos()$/;"	f
+maybe_remove	scripts/bin/kerl	/^maybe_remove()$/;"	f
+ngx_disable_site	scripts/bin/nginx-mod	/^ngx_disable_site() {$/;"	f
+ngx_enable_site	scripts/bin/nginx-mod	/^ngx_enable_site() {$/;"	f
+ngx_error	scripts/bin/nginx-mod	/^ngx_error() {$/;"	f
+ngx_help	scripts/bin/nginx-mod	/^ngx_help() {$/;"	f
+ngx_list_site	scripts/bin/nginx-mod	/^ngx_list_site() {$/;"	f
+ngx_prompt	scripts/bin/nginx-mod	/^ngx_prompt() {$/;"	f
+ngx_reload	scripts/bin/nginx-mod	/^ngx_reload() {$/;"	f
+ngx_select_site	scripts/bin/nginx-mod	/^ngx_select_site() {$/;"	f
+ngx_sites	scripts/bin/nginx-mod	/^ngx_sites() {$/;"	f
+path_usage	scripts/bin/kerl	/^path_usage()$/;"	f
+print_buildopts	scripts/bin/kerl	/^print_buildopts()$/;"	f
+realpath	scripts/bin/kerl	/^realpath() {$/;"	f
+resolve_symlinks	scripts/bin/kerl	/^resolve_symlinks() {$/;"	f
+set	scripts/bin/gle-performance	/^function set-performance {$/;"	f
+show_configuration_warnings	scripts/bin/kerl	/^show_configuration_warnings()$/;"	f
+show_logfile	scripts/bin/kerl	/^show_logfile()$/;"	f
+tarball_download	scripts/bin/kerl	/^tarball_download()$/;"	f
+update_checksum_file	scripts/bin/kerl	/^update_checksum_file()$/;"	f
+update_usage	scripts/bin/kerl	/^update_usage()$/;"	f
+usage	scripts/bin/kerl	/^usage()$/;"	f

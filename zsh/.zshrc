@@ -85,3 +85,6 @@ bindkey '^P' fuzzy-search-and-edit
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+
+
+[[ -s "/home/fredrik/.gvm/scripts/gvm" ]] && source "/home/fredrik/.gvm/scripts/gvm"

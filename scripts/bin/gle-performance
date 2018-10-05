@@ -1,0 +1,47 @@
+#!/usr/bin/env bash
+
+API_KEY=sIg3kN76LCSfD15mBPNeo5UbQyXS8aFbq21J2W00
+API_USER=cl21580
+SERVER_ID=vz2613988
+MEMORY=1024
+CPU_CORES=1
+BANDWIDTH=10
+
+function has-ssh {
+  ps aux | grep -q -e "sshd:\s*fredrik@pts"
+}
+
+function has-8-cores {
+  /usr/bin/curl -X POST \
+    -s \
+    --data-urlencode "serverid=$SERVER_ID" \
+    -k --basic -u $API_USER:$API_KEY https://api.glesys.com/server/details/ \
+    | grep -q -e "cpucores>8"
+}
+
+function set-performance {
+  /usr/bin/curl -X POST \
+    -s -d \
+    serverid=$SERVER_ID\&memorysize=$MEMORY\&cpucores=$CPU_CORES\&bandwitdth=$BANDWIDTH \
+    -k --basic -u $API_USER:$API_KEY https://api.glesys.com/server/edit/ > /dev/null
+}
+
+if has-ssh ; then
+  MEMORY=8192
+  CPU_CORES=8
+  BANDWIDTH=100
+  if ! has-8-cores ; then
+    echo "Setting performance HI: $MEMORY $CPU_CORES $BANDWIDTH"
+    set-performance
+  else
+    echo "Staying in HI"
+  fi
+else
+  if has-8-cores ; then
+    echo "Setting performance LOW: $MEMORY $CPU_CORES $BANDWIDTH"
+    set-performance
+  else
+    echo "Staying in LOW"
+  fi
+fi
+

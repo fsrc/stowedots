@@ -5,3 +5,4 @@ known_hosts
 thefarm
 thefarm.pub
 environment-*
+configstore/
