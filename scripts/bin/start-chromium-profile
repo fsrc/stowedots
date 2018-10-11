@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+USER_NAME=´list-chromium.ls´
+PROFILE=´list-chromium.ls ${USER_NAME}´
+chromium --profile-directory="${PROFILE}"
+

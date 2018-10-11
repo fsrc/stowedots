@@ -1,43 +1,43 @@
 ! Urxvt ---------------------------------------------------------------
-*font: xft:DejaVu Sans Mono for Powerline:antialias=true:pixelsize=15
+*font: xft:DejaVu Sans Mono for Powerline:antialias=true:pixelsize=8
 !*boldFont:xft:DejaVu Sans Mono for Powerline:style=bold:antialias=true:pixelsize=11
 
-URxvt*letterSpace: -1
-URxvt*lineSpace: 3
+!URxvt*letterSpace: -1
+!URxvt*lineSpace: 3
 
-URxvt*urgentOnBell: true
-URxvt*visualBell: false
-URxvt*saveLines: 64000
-URxvt*internalBorder: 0
-Urxvt*secondaryScroll: true
-URxvt*scrollTtyKeypress: true
-URxvt*scrollWithBuffer: true
-URxvt*scrollTtyOutput: false
-URxvt*loginShell: true
-URxvt*scrollBar: false
-URxvt*transparent: true
+!URxvt*urgentOnBell: true
+!URxvt*visualBell: false
+!URxvt*saveLines: 64000
+!URxvt*internalBorder: 0
+!Urxvt*secondaryScroll: true
+!URxvt*scrollTtyKeypress: true
+!URxvt*scrollWithBuffer: true
+!URxvt*scrollTtyOutput: false
+!URxvt*loginShell: true
+!URxvt*scrollBar: false
+!URxvt*transparent: true
 ! URxvt*tint: #020202
-URxvt*shading: 6
+!URxvt*shading: 6
 !URxvt*fading: 30
 
-URxvt*perl-ext-common: default,matcher,-option-popup,-selection-popup,-realine,font-size,vim-scrollback
-URxvt*matcher.button: 1
-URxvt*urlLauncher: chromium
-URxvt*vim-scrollback: M-s
-URxvt*vim-scrollback-paste: M-p
+!URxvt*perl-ext-common: default,matcher,-option-popup,-selection-popup,-realine,font-size,vim-scrollback
+!URxvt*matcher.button: 1
+!URxvt*urlLauncher: chromium
+!URxvt*vim-scrollback: M-s
+!URxvt*vim-scrollback-paste: M-p
 
 !Cursor
-URxvt*cursorColor: #999999
-URxvt*cursorBlink: true
-URxvt*cursorUnderline: false
+!URxvt*cursorColor: #999999
+!URxvt*cursorBlink: true
+!URxvt*cursorUnderline: false
 !Binding Keys
-URxvt*keysym.Home: \033[1~
-URxvt*keysym.End: \033[4~
+!URxvt*keysym.Home: \033[1~
+!URxvt*keysym.End: \033[4~
 
-URxvt.keysym.C-Up:     perl:font-size:increase
-URxvt.keysym.C-Down:   perl:font-size:decrease
-URxvt.keysym.C-S-Up:   perl:font-size:incglobal
-URxvt.keysym.C-S-Down: perl:font-size:decglobal
+!URxvt.keysym.C-Up:     perl:font-size:increase
+!URxvt.keysym.C-Down:   perl:font-size:decrease
+!URxvt.keysym.C-S-Up:   perl:font-size:incglobal
+!URxvt.keysym.C-S-Down: perl:font-size:decglobal
 
 !Xft.rgba: rgb
 

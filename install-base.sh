@@ -44,7 +44,6 @@ ensure_command stow
 ensure_command git
 ensure_command zsh
 ensure_command vim
-ensure_command mc
 ensure_command curl
 
 install_oh-my-zsh

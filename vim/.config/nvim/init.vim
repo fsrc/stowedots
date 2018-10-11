@@ -10,20 +10,23 @@ call plug#begin('~/.cache/vim/plugged')
 Plug 'scrooloose/nerdtree'
 
 " Fuzzy finder
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'junegunn/fzf.vim'
+" Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+" Plug 'junegunn/fzf.vim'
 
 " Built in terminal
 Plug 'kassio/neoterm'
 
+" Postgresql
+Plug 'vim-scripts/dbext.vim'
+
 " Cross file grep
-Plug 'mhinz/vim-grepper'
+" Plug 'mhinz/vim-grepper'
 
 " Send commands to term
-Plug 'jalvesaq/vimcmdline'
+" Plug 'jalvesaq/vimcmdline'
 
 " Cross file search
-Plug 'brooth/far.vim'
+" Plug 'brooth/far.vim'
 
 " Status line
 Plug 'itchyny/lightline.vim'
@@ -69,6 +72,9 @@ Plug 'mhartington/oceanic-next'
 Plug 'joshdick/onedark.vim'     " Don't forget to symlink the colors for lightbar
 Plug 'agude/vim-eldar'
 
+" Highlight tags
+Plug 'vim-scripts/TagHighlight'
+
 call plug#end()
 
 let NERDTreeBookmarksFile=expand("$HOME/.cache/NERDTreeBookmarks")
@@ -78,12 +84,15 @@ set shiftwidth=2
 set expandtab
 set smarttab
 
-colorscheme lyla
+colorscheme darkblue
+hi Normal guibg=NONE ctermbg=NONE
+hi NonText ctermbg=none
+
 
 " Keymapping
 "nmap <C-e> :VifmToggle ./<CR>
-nmap <C-e> :!nvim-vifm<CR>
-nmap <C-p> :FZF<CR>
+nmap <C-e> :NERDTreeToggle<CR>
+" nmap <C-p> :FZF<CR>
 
 " Start interactive EasyAlign in visual mode (e.g. vipga)
 xmap ga <Plug>(EasyAlign)
@@ -121,4 +130,5 @@ tnoremap <M-h> <C-\><C-n><C-w>h
 
 set viminfo='1000,n~/.cache/viminfo
 set belloff=all
-set conseallevel=0
+
+let g:dbext_default_profile_psql = 'type=PGSQL:host=db1.cmindkm1fmw7.eu-west-1.rds.amazonaws.com:port=5433:dbname=link_production:user=link'

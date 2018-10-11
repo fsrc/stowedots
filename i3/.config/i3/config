@@ -14,7 +14,7 @@ set $mod Mod4
 
 # font for window titles. ISO 10646 = Unicode
 focus_follows_mouse no
-font pango:DejaVu Sans Mono 10
+font pango:Libration Mono 9
 
 new_window pixel
 # class                 border  backgr. text     indicato
@@ -23,17 +23,25 @@ new_window pixel
 floating_modifier $mod
 
 
+gaps inner 5 
+gaps outer 5
+
 # start a terminal
-bindsym $mod+Shift+Return exec ~/bin/st #urxvtc /usr/bin/nvim-qt --nofork -- -c ":te" # #~/bin/term.sh
+bindsym $mod+Shift+Return exec st
 bindsym $mod+Ctrl+Return exec chromium
+bindsym $mod+o exec "rse -d fsrc.pw open"
 bindsym $mod+n exec rse new
+
+bindsym $mod+Ctrl+s exec "/usr/bin/scrot -s '%Y-%m-%d_$wx$h_scrot.png' -e 'mv $f ~/screen-shots/'"
+
 
 
 # kill focused window
 bindsym $mod+Shift+Q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+Ctrl+d exec dmenu_run
+bindsym $mod+Ctrl+d exec dmenu_run -p 'CMD' -fn 'Libration Mono:pixelsize=12' -nb '#2c001e' -nf '#aea79f' -sf '#ffffff' -sb '#dd4814'
+bindsym $mod+Ctrl+n exec "chromium-profiles --list --open --dmenu='[\\"-p\\",\\"PROFILE\\",\\"-fn\\",\\"Liberation Mono:pixelsize=12\\",\\"-nb\\",\\"#2c001e\\",\\"-nf\\",\\"#aea79f\\",\\"-sf\\",\\"#ffffff\\",\\"-sb\\",\\"#dd4814\\"]'
 
 # change focus
 # bindsym $mod+h focus left
@@ -128,20 +136,25 @@ bindsym $mod+Ctrl+b exec i3lock-fancy -p
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-  status_command i3status
+  i3bar_command i3bar -t
+  status_command i3blocks
   colors {
-    separator #F0C674
-    background #1D1F21
-    statusline #DE935F
-    focused_workspace #81A2BE #5F819D #282A2E
-    active_workspace #8ABEB7 #5E8D87 #C5C8C6
-    inactive_workspace #707880 #282A2E #C5C8C6
-    urgent_workspace #CC6666 #A54242 #F0C674
+    separator #333333
+    background #2c001e99
+    statusline #aea79f
+    focused_workspace #dd4814 #dd4814 #ffffff
+    active_workspace #902a07 #902a07 #aea79f
+    inactive_workspace #902a07 #902a07 #aea79f
+    urgent_workspace #77216f #77216f #ffffff
   }
 }
 # class                 border  backgr. text    indicator child_border
-client.focused          #0088CC #0088CC #ffffff #dddddd   #81A2BE
-client.focused_inactive #333333 #333333 #888888 #292d2e   #5F819D
-client.unfocused        #333333 #333333 #888888 #292d2e   #373B41
-client.urgent           #2f343a #900000 #ffffff #900000   #CC6666
 
+
+client.focused #dd4814 #dd4814 #ffffff #902a07
+client.focused_inactive #5e2750 #5e2750 #aea79f #5e2750
+client.unfocused #5e2750 #5e2750 #aea79f #5e2750
+client.urgent #77216f #77216f #ffffff #efb73e
+
+exec nitrogen --restore
+exec compton -c -b

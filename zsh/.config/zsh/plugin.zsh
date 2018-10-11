@@ -2,7 +2,7 @@
 zplug "dracula/zsh", as:theme
 
 # Jump to directories
-zplug "wting/autojump"
+# zplug "wting/autojump"
 
 # Calculator
 zplug "arzzen/calc.plugin.zsh"
@@ -17,7 +17,7 @@ zplug "lukechilds/zsh-better-npm-completion"
 zplug "sharat87/zsh-vim-mode"
 
 # Fuzzy search change directory
-zplug "b4b4r07/enhancd", use:init.sh
+# zplug "b4b4r07/enhancd", use:init.sh
 
 # Enables asynchronous plugins
 zplug "mafredri/zsh-async"
