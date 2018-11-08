@@ -27,7 +27,7 @@ gaps inner 5
 gaps outer 5
 
 # start a terminal
-bindsym $mod+Shift+Return exec st
+bindsym $mod+Shift+Return exec terminator --profile=local
 bindsym $mod+Ctrl+Return exec chromium
 bindsym $mod+o exec "rse -d fsrc.pw open"
 bindsym $mod+n exec rse new
@@ -130,8 +130,8 @@ bindsym $mod+Shift+E exit
 bindsym $mod+r exec i3-input -F 'rename workspace to %s' -P 'New name: '
 
 # Screen saver
-bindsym $mod+Ctrl+b exec i3lock-fancy -p
-
+# bindsym $mod+Ctrl+b exec i3lock-fancy -p
+bindsym $mod+Ctrl+b exec xscreensaver-command -lock
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
